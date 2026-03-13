@@ -1,0 +1,61 @@
+.languages {
+  background: var(--gray-light);
+}
+
+.languages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.language-card {
+  background: var(--gradient-card);
+  border: 1px solid rgba(236, 72, 153, 0.15);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: langBounce 0.6s ease forwards;
+  opacity: 0;
+}
+
+.language-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(236, 72, 153, 0.35);
+}
+
+.language-flag {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.language-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+}
+
+.language-level {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--pink-accent);
+}
+
+@keyframes langBounce {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
